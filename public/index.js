@@ -38,7 +38,13 @@ var handleSelect = function(countries, countryName){
 
   var flag = document.querySelector('img');
   flag.src = country.flag;
-  flag.width = 100;
+  flag.width = 160;
+
+
+  var nativeName = document.querySelector('#native-name');
+  nativeName.innerHTML = country.nativeName;
+
+
 
   var lat = country.latlng[0];
   var lng = country.latlng[1];
