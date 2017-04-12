@@ -6,16 +6,21 @@ var app = function(){
   makeRequest(url, requestComplete);
 
 
-  var select = document.querySelector('select');
-  select.onchange = handleSelect;
 }
 
 
 
 
-var handleSelect = function(e){
-  var pTag = document.querySelector('#select-result');
-  pTag.innerHTML = this.value;
+var handleSelect = function(countries, item){
+
+  console.log(countries)
+  console.log(item)
+
+  var popTag = document.querySelector('#population');
+  popTag.innerHTML = "test";
+
+  // var populationTag = document.querySelector('')
+
 }
 
 
@@ -28,6 +33,13 @@ var populateList = function(countries){
 
     select.appendChild(option);
   })
+
+
+  var select = document.querySelector('select');
+  select.onchange = function(){
+    handleSelect(countries, this.value);
+  }
+
 
 }
 
@@ -49,6 +61,7 @@ var requestComplete = function(){
 
   //hand off responsibility to another function for putting the list on our webpage
   populateList(countries);
+
 
 }
 
