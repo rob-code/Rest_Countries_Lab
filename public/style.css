@@ -12,6 +12,7 @@ body {
 #main-map {
   width: 400px;
   height: 400px;
+
 }
 
 .head{
@@ -26,13 +27,10 @@ color: #FFFFFF;
 
 }
 
-
-.selector{
+/*.selector{
   margin: auto;
-  width: ;
-
 }
-
+*/
 .flex {
 
   align-items: center;
