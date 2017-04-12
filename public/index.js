@@ -44,14 +44,11 @@ var handleSelect = function(countries, countryName){
   var nativeName = document.querySelector('#native-name');
   nativeName.innerHTML = country.nativeName;
 
-
-
   var lat = country.latlng[0];
   var lng = country.latlng[1];
 
   position = {lat: lat, lng: lng};
   createMap(position);
-
 
 }
 
