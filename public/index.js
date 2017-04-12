@@ -4,8 +4,6 @@ var app = function(){
 
   //load the data from the API
   makeRequest(url, requestComplete);
-
-
 }
 
 
@@ -29,7 +27,6 @@ var handleSelect = function(countries, countryName){
 
   saveCountry(country);
 
-
   var name = document.querySelector('#name');
   name.innerHTML = "Country Name: " + country.name;
 
@@ -39,7 +36,28 @@ var handleSelect = function(countries, countryName){
   var city = document.querySelector('#capital-city');
   city.innerHTML = "Capital City: " + country.capital;
 
+  var flag = document.querySelector('img');
+  flag.src = country.flag;
+  flag.width = 100;
+
+  var lat = country.latlng[0];
+  var lng = country.latlng[1];
+
+  position = {lat: lat, lng: lng};
+  createMap(position);
+
+
 }
+
+var createMap = function (position) {
+
+var mapDiv = document.getElementById('main-map')
+
+  var map = new MapWrapper(mapDiv, position, 5);
+
+
+
+} 
 
 
 var populateList = function(countries){
@@ -58,11 +76,7 @@ var populateList = function(countries){
     handleSelect(countries, this.value);
   }
 
-
 }
-
-
-
 
 var requestComplete = function(){
   //check we get a http status 200
@@ -83,7 +97,6 @@ var requestComplete = function(){
 
 }
 
-
 var makeRequest = function(url, callback){
   //create a new XMLHttpRequest object
   var request = new XMLHttpRequest();
@@ -97,8 +110,5 @@ var makeRequest = function(url, callback){
   //send request
   request.send();
 }
-
-
-
 
 window.onload = app;

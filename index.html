@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Explore Countries</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <title>Explore Countries</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src='index.js'></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src='MapWrapper.js'></script>
 
-    <script src='index.js'></script>
 
-  </head>
-  <body>
-    <h1>Explore Countries Around the World</h1>
-    
-<select>
+</head>
+<body>
+
+  <h1>Explore Countries Around the World</h1>
+  
+  <select>
     <option disabled selected>Please choose a country to explore</option>
-</select>
+  </select>
 
   <p id='name'></p>
   <p id='population'></p>
   <p id='capital-city'></p>
+  <div><img></div>
+
+  <div id="main-map"></div>
 
 
-  </body>
+</body>
 </html>
