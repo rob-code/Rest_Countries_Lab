@@ -9,17 +9,35 @@ var app = function(){
 }
 
 
+var saveCountry = function (country){
+var state = JSON.parse(localStorage.getItem('countryStore')) || [];
+state.push(country);
+localStorage.setItem('countryStore', JSON.stringify(state));
+}
 
 
-var handleSelect = function(countries, item){
 
-  console.log(countries)
-  console.log(item)
+var handleSelect = function(countries, countryName){
 
-  var popTag = document.querySelector('#population');
-  popTag.innerHTML = "test";
+  var country = '';
 
-  // var populationTag = document.querySelector('')
+  for (var i = 0; i < countries.length; i++){
+    if (countries[i].name == countryName) {
+      country = countries[i]
+    }
+  }
+
+  saveCountry(country);
+
+
+  var name = document.querySelector('#name');
+  name.innerHTML = "Country Name: " + country.name;
+
+  var pop = document.querySelector('#population');
+  pop.innerHTML = "Population: " + country.population;
+
+  var city = document.querySelector('#capital-city');
+  city.innerHTML = "Capital City: " + country.capital;
 
 }
 
