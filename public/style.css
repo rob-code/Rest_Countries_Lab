@@ -1,0 +1,57 @@
+* {
+  font-family: helvetica;
+}
+
+body {
+  background-image: url("earth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+#main-map {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #808080;
+}
+
+.head{
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.header{
+text-align: center;
+padding-bottom: 40px;
+color: #FFFFFF;
+
+}
+
+
+.selector{
+  margin: auto;
+  width: ;
+
+}
+
+.flex {
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.col1{
+  width: 400px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px
+}
+
+
+.col2{
+  width: 400px;
+  color: #FFFFFF;
+}
